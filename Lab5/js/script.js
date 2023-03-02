@@ -19,8 +19,13 @@ do {
     if (again === "y" || again === "n") {
         continue;
     } else {
-        alert("The enter is wrong! please enter \"y\" or \"n\" again. ");
-        again = prompt('Run application again? (y or n)', 'y');
+        do {     
+            alert("The enter is wrong! please enter \"y\" or \"n\" again. ");
+            again = prompt('Run application again? (y or n)', 'y');
+            if (again === "y" || again === "n") {
+                break
+            };  
+        } while (again !== "y" || again !== "n");         
     };
           
 } while (again === 'y');

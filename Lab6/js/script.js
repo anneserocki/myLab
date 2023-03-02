@@ -10,6 +10,11 @@ investment = parseFloat(prompt('Enter investment amount as xxxx.xx'));
 while (isNaN(investment)) {
     window.alert("The number you entered is wrong! Please re-enter.");
     investment = parseFloat(prompt('Enter investment amount as xxxx.xx'));
+    if ((!isNaN(investment))) {
+        break
+    } else {
+        continue
+    };
 };
 
 rate = parseFloat(prompt('Enter interest rate as xx.x'));
@@ -17,6 +22,11 @@ rate = parseFloat(prompt('Enter interest rate as xx.x'));
 while ((isNaN(rate)) || rate/100 < 0 || rate/100 >1 ) {
     window.alert("The number you entered is wrong! It  should be between 0 and a realistic rate like 6% after the number you entered divides 100. Please re-enter.");
     rate = parseFloat(prompt('Enter interest rate as xx.x'));
+    if ((!isNaN(rate)) && rate/100 > 0 && rate/100 < 1) {
+        break
+    } else {
+        continue
+    };
 };
 
 years = parseInt(prompt('Enter the number of years you want to invest for'));
@@ -24,6 +34,11 @@ years = parseInt(prompt('Enter the number of years you want to invest for'));
 while ((isNaN(years)) || years < 1 || years > 30 ) {
     window.alert("The number you entered is wrong! It should be between 1 and 30, please re-enter.");
     years = parseInt(prompt('Enter the number of years you want to invest for'));
+    if ((!isNaN(years)) && years > 1 && years < 30) {
+        break
+    } else {
+        continue
+    };
 };
 
 // CALCULATE FUTURE VALUE
